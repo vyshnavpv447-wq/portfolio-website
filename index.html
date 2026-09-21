@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Vyshnav PV - Digital Marketer, SEO specialist, marketing creative, video editor and web designer from Kerala.">
+
+    <title>Vyshnav PV | Digital Marketer</title>
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #111;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        :root {
+            --red: #e60023;
+            --red-dark: #b8001d;
+            --red-light: #fff1f3;
+            --black: #111;
+            --gray: #666;
+            --light: #f7f7f7;
+            --white: #fff;
+            --border: #e5e5e5;
+        }
+
+
+        /* =====================================================
+           SCROLLBAR
+        ===================================================== */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--red);
+            border-radius: 20px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            width: min(1200px, 100%);
+            height: 70px;
+            margin: auto;
+
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           COMMON
+        ===================================================== */
+
+        .container {
+            width: min(1200px, 100%);
+            margin: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: clamp(36px, 5vw, 60px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-top: 12px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 650px;
+            margin-top: 18px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 70px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 85% 30%,
+                    rgba(230, 0, 35, .08),
+                    transparent 30%
+                );
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border: 1px solid rgba(230, 0, 35, .12);
+
+            border-radius: 50%;
+
+            right: -180px;
+            top: 120px;
+
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(320px, .9fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .hero-text {
+            min-width: 0;
+            animation: slideLeft .8s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-small {
+            color: var(--red);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(58px, 8vw, 105px);
+
+            line-height: .86;
+
+            letter-spacing: -6px;
+
+            margin-bottom: 30px;
+
+            overflow-wrap: break-word;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .hero-description {
+            max-width: 600px;
+
+            color: var(--gray);
+
+            font-size: 17px;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 12px 22px;
+
+            border: 2px solid var(--black);
+
+            border-radius: 5px;
+
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            border-color: var(--red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--black);
+            border-color: var(--black);
+            transform: translateY(-4px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+
+        /* =====================================================
+           PROFILE
+        ===================================================== */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+
+            animation: slideRight .9s ease forwards;
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .profile-box {
+            width: min(350px, 85vw);
+            aspect-ratio: 350 / 450;
+
+            padding: 10px;
+
+            background: var(--red);
+
+            border: 3px solid var(--black);
+
+            border-radius: 15px;
+
+            position: relative;
+
+            transform: rotate(3deg);
+
+            animation: float 4s ease-in-out infinite;
+
+            transition: .4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(3deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(3deg);
+            }
+        }
+
+        .profile-box:hover {
+            animation-play-state: paused;
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center top;
+
+            border-radius: 8px;
+        }
+
+        .profile-label {
+            position: absolute;
+
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+
+            padding: 12px 15px;
+
+            background: rgba(17, 17, 17, .94);
+
+            border-radius: 7px;
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+        .profile-label strong {
+            font-size: 13px;
+        }
+
+        .profile-label span {
+            color: #ff4d68;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: .7fr 1.3fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .about-number {
+            font-size: clamp(100px, 15vw, 180px);
+
+            line-height: 1;
+
+            font-weight: 900;
+
+            color: var(--red);
+
+            -webkit-text-stroke: 2px var(--black);
+
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+        .about-text h3 {
+            font-size: 34px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 14px;
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .info-box {
+            background: white;
+
+            padding: 17px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            transition: .3s;
+        }
+
+        .info-box:hover {
+            border-color: var(--red);
+            transform: translateY(-4px);
+        }
+
+        .info-box strong {
+            display: block;
+
+            color: #999;
+
+            font-size: 11px;
+
+            margin-bottom: 3px;
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+        .skill {
+            padding: 25px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            transition: .3s;
+
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        .skill.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill:hover {
+            border-color: var(--red);
+            transform: translateY(-7px) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .07);
+        }
+
+        .skill-number {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .skill h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .skill p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-top: 7px;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .services {
+            background: var(--black);
+            color: white;
+        }
+
+        .services .section-title p {
+            color: #aaa;
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .service {
+            padding: 30px;
+
+            border: 1px solid #333;
+
+            border-radius: 10px;
+
+            transition: .35s;
+        }
+
+        .service:hover {
+            background: var(--red);
+            border-color: var(--red);
+            transform: translateY(-7px);
+        }
+
+        .service-number {
+            color: #ff506b;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .service:hover .service-number {
+            color: white;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin: 14px 0;
+        }
+
+        .service p {
+            color: #aaa;
+        }
+
+        .service:hover p {
+            color: white;
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .education {
+            background: var(--light);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 9px;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--red);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 45px;
+
+            margin-bottom: 40px;
+
+            opacity: 0;
+
+            transform: translateX(-25px);
+
+            transition: .6s;
+        }
+
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 0;
+            top: 5px;
+
+            width: 20px;
+            height: 20px;
+
+            background: var(--red);
+
+            border: 3px solid var(--black);
+
+            border-radius: 50%;
+        }
+
+        .timeline-item span {
+            color: var(--red);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+            margin: 5px 0;
+        }
+
+        .timeline-item p {
+            color: var(--gray);
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .project {
+            min-height: 250px;
+
+            padding: 28px;
+
+            border: 2px solid var(--black);
+
+            border-radius: 10px;
+
+            transition: .35s;
+
+            opacity: 0;
+            transform: translateY(25px);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .project.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project:hover {
+            border-color: var(--red);
+            transform: translateY(-7px) !important;
+        }
+
+        .project h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project p {
+            color: var(--gray);
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-tag {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 5px 10px;
+
+            background: var(--red-light);
+
+            color: var(--red);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            border-radius: 20px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-item {
+            padding: 16px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            transition: .3s;
+
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item:hover {
+            border-color: var(--red);
+            transform: translateX(5px);
+        }
+
+        .contact-item span {
+            display: block;
+
+            color: #999;
+
+            font-size: 10px;
+
+            margin-bottom: 3px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 13px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            border: 1px solid #ddd;
+
+            border-radius: 6px;
+
+            padding: 14px;
+
+            background: white;
+
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--red);
+
+            box-shadow:
+                0 0 0 3px rgba(230, 0, 35, .08);
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--black);
+            color: white;
+            padding: 30px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: #aaa;
+            transition: .3s;
+        }
+
+        .footer-social a:hover {
+            color: var(--red);
+        }
+
+
+        /* =====================================================
+           SCROLL ANIMATION
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                min-height: auto;
+                padding-top: 100px;
+                padding-bottom: 80px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: 2;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-number {
+                text-align: center;
+            }
+
+            .skills-grid,
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE NAVIGATION
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: 65px;
+            }
+
+            nav {
+                height: 65px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 65px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 22px 20px;
+
+                background: white;
+
+                border-bottom: 1px solid var(--border);
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+            }
+
+            .nav-links.active {
+                display: flex;
+                animation: menu .25s ease;
+            }
+
+            @keyframes menu {
+
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .container {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 65px;
+            }
+
+            .hero-grid {
+                gap: 45px;
+            }
+
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+                line-height: 1.5;
+            }
+
+            .hero h1 {
+                font-size: clamp(52px, 17vw, 75px);
+                letter-spacing: -4px;
+                line-height: .88;
+                margin-bottom: 25px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .profile-box {
+                width: min(290px, 82vw);
+            }
+
+            .profile-label {
+                left: 14px;
+                right: 14px;
+                bottom: 14px;
+
+                padding: 11px;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 2px;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 38px;
+                letter-spacing: -1.5px;
+            }
+
+            .section-title p {
+                font-size: 14px;
+            }
+
+            .about-number {
+                font-size: 100px;
+            }
+
+            .about-text h3 {
+                font-size: 28px;
+            }
+
+            .about-text p {
+                font-size: 14px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid,
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill,
+            .service {
+                padding: 23px;
+            }
+
+            .project {
+                min-height: 220px;
+            }
+
+            .contact-info h3 {
+                font-size: 30px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL PHONES
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -3px;
+            }
+
+            .hero-small {
+                font-size: 9px;
+            }
+
+            .profile-box {
+                width: 260px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                VYSHNAV<span>.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#education">Education</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation"
+            >
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+
+                <div class="hero-text">
+
+                    <div class="hero-small">
+                        Digital Marketer • Creative • Business
+                    </div>
+
+                    <h1>
+                        VYSHNAV
+                        <span>PV.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm a digital marketer passionate about marketing,
+                        business and creativity. I want to help brands build
+                        their presence, connect with people and grow online.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="#contact"
+                            class="btn btn-primary"
+                        >
+                            Let's Connect
+                        </a>
+
+                        <a
+                            href="#projects"
+                            class="btn btn-secondary"
+                        >
+                            Explore My Work
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <div class="profile-box">
+
+                        <!--
+                            KEEP profile.jpg IN THE SAME FOLDER
+                            AS THIS HTML FILE
+                        -->
+
+                        <img
+                            src="profile.jpg"
+                            alt="Vyshnav PV - Digital Marketer"
+                            class="profile-image"
+                        >
+
+                        <div class="profile-label">
+
+                            <strong>
+                                VYSHNAV PV
+                            </strong>
+
+                            <span>
+                                DIGITAL MARKETER
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ===================================================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    01 — About Me
+                </span>
+
+                <h2>
+                    Building myself.<br>
+                    Building ideas.
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="reveal">
+
+                    <div class="about-number">
+                        20
+                    </div>
+
+                    <p>
+                        Years old • Kerala, India
+                    </p>
+
+                </div>
+
+
+                <div class="about-text reveal">
+
+                    <h3>
+                        Hello, I'm Vyshnav.
+                    </h3>
+
+                    <p>
+                        I am a BA Economics graduate and Digital Marketer
+                        currently based in Trivandrum. I love marketing,
+                        creativity, technology and business.
+                    </p>
+
+                    <p>
+                        My interest goes beyond simply working for a company.
+                        I want to understand how businesses work, how brands
+                        grow and how marketing can create real value.
+                    </p>
+
+                    <p>
+                        My long-term goal is to build multiple businesses.
+                        I am continuously learning, experimenting and using
+                        every mistake as an opportunity to improve.
+                    </p>
+
+                    <p>
+                        I am originally from Koruthodu, Mundakkayam,
+                        Kottayam and currently living in Trivandrum
+                        for personal growth and development.
+                    </p>
+
+
+                    <div class="info-grid">
+
+                        <div class="info-box">
+                            <strong>Education</strong>
+                            BA Economics
+                        </div>
+
+                        <div class="info-box">
+                            <strong>Location</strong>
+                            Trivandrum
+                        </div>
+
+                        <div class="info-box">
+                            <strong>Focus</strong>
+                            Digital Marketing
+                        </div>
+
+                        <div class="info-box">
+                            <strong>Goal</strong>
+                            Build Multiple Businesses
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SKILLS
+    ===================================================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    02 — Skills
+                </span>
+
+                <h2>
+                    Skills I use<br>
+                    and keep building.
+                </h2>
+
+                <p>
+                    I am continuously improving my skills through practical
+                    learning, projects and experimentation.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <span class="skill-number">01</span>
+                    <h3>Digital Marketing</h3>
+                    <p>Digital marketing strategy and brand growth.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">02</span>
+                    <h3>SEO</h3>
+                    <p>Search engine optimization and organic growth.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">03</span>
+                    <h3>SMM</h3>
+                    <p>Social media marketing and content strategy.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">04</span>
+                    <h3>SEM</h3>
+                    <p>Search engine marketing and paid campaigns.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">05</span>
+                    <h3>HTML & CSS</h3>
+                    <p>Responsive websites and modern layouts.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">06</span>
+                    <h3>Video Editing</h3>
+                    <p>Video content for digital platforms.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">07</span>
+                    <h3>Motion Graphics</h3>
+                    <p>Motion design and animated content.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">08</span>
+                    <h3>Canva & CapCut</h3>
+                    <p>Creative design and video editing.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">09</span>
+                    <h3>AI Tools</h3>
+                    <p>AI for research, creativity and productivity.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">10</span>
+                    <h3>Communication</h3>
+                    <p>Communication and leadership skills.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">11</span>
+                    <h3>Marketing Analysis</h3>
+                    <p>Understanding markets and audiences.</p>
+                </div>
+
+                <div class="skill">
+                    <span class="skill-number">12</span>
+                    <h3>Alight Motion</h3>
+                    <p>Mobile motion graphics and editing.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERVICES
+    ===================================================== -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    03 — Services
+                </span>
+
+                <h2>
+                    Helping brands<br>
+                    move forward.
+                </h2>
+
+                <p>
+                    Marketing, creative content and technology
+                    for digital growth.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service reveal">
+                    <span class="service-number">01</span>
+                    <h3>Digital Marketing</h3>
+                    <p>
+                        Digital strategies focused on visibility,
+                        engagement and brand growth.
+                    </p>
+                </div>
+
+                <div class="service reveal">
+                    <span class="service-number">02</span>
+                    <h3>Social Media</h3>
+                    <p>
+                        Social media content and marketing strategies.
+                    </p>
+                </div>
+
+                <div class="service reveal">
+                    <span class="service-number">03</span>
+                    <h3>SEO</h3>
+                    <p>
+                        Search optimization strategies for organic growth.
+                    </p>
+                </div>
+
+                <div class="service reveal">
+                    <span class="service-number">04</span>
+                    <h3>Content Creation</h3>
+                    <p>
+                        Video editing, motion graphics and digital content.
+                    </p>
+                </div>
+
+                <div class="service reveal">
+                    <span class="service-number">05</span>
+                    <h3>Web Design</h3>
+                    <p>
+                        Clean, responsive websites for brands and businesses.
+                    </p>
+                </div>
+
+                <div class="service reveal">
+                    <span class="service-number">06</span>
+                    <h3>Marketing Strategy</h3>
+                    <p>
+                        Research and strategic ideas for business growth.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EDUCATION
+    ===================================================== -->
+
+    <section class="education" id="education">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    04 — Education
+                </span>
+
+                <h2>
+                    My learning journey.
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span>
+                        School
+                    </span>
+
+                    <h3>
+                        Government School, Kuzhimavu
+                    </h3>
+
+                    <p>
+                        Completed education from 1st standard
+                        to 10th standard.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span>
+                        Higher Secondary
+                    </span>
+
+                    <h3>
+                        CKM HSS, Koruthodu
+                    </h3>
+
+                    <p>
+                        Completed higher secondary education
+                        in Kottayam.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        BA Economics
+                    </h3>
+
+                    <p>
+                        Government College Kottayam.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS
+    ===================================================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    05 — Learning & Projects
+                </span>
+
+                <h2>
+                    Learning by<br>
+                    building.
+                </h2>
+
+                <p>
+                    I don't currently have formal work experience.
+                    I focus on learning, experimenting and building
+                    practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <div class="project">
+                    <h3>Digital Marketing Projects</h3>
+                    <p>
+                        Exploring SEO, SMM, SEM, content strategy
+                        and digital growth.
+                    </p>
+                    <span class="project-tag">
+                        DIGITAL MARKETING
+                    </span>
+                </div>
+
+                <div class="project">
+                    <h3>Website Projects</h3>
+                    <p>
+                        Building responsive websites using HTML and CSS.
+                    </p>
+                    <span class="project-tag">
+                        WEB DEVELOPMENT
+                    </span>
+                </div>
+
+                <div class="project">
+                    <h3>Creative Content</h3>
+                    <p>
+                        Practicing video editing, motion graphics
+                        and visual content.
+                    </p>
+                    <span class="project-tag">
+                        CREATIVE
+                    </span>
+                </div>
+
+                <div class="project">
+                    <h3>Business Research</h3>
+                    <p>
+                        Studying businesses, markets and marketing strategies.
+                    </p>
+                    <span class="project-tag">
+                        BUSINESS
+                    </span>
+                </div>
+
+                <div class="project">
+                    <h3>Personal Branding</h3>
+                    <p>
+                        Building my own digital presence and marketing skills.
+                    </p>
+                    <span class="project-tag">
+                        BRANDING
+                    </span>
+                </div>
+
+                <div class="project">
+                    <h3>AI & Marketing</h3>
+                    <p>
+                        Exploring AI for research, creativity and marketing.
+                    </p>
+                    <span class="project-tag">
+                        AI
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>
+                    06 — Contact
+                </span>
+
+                <h2>
+                    Let's build<br>
+                    something.
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+
+                    <h3>
+                        Have an idea?
+                    </h3>
+
+                    <p>
+                        If you have a marketing project, creative idea,
+                        website requirement or business opportunity,
+                        let's connect.
+                    </p>
+
+
+                    <div class="contact-details">
+
+                        <div class="contact-item">
+                            <span>Email</span>
+
+                            <a href="mailto:vyshnavpv447@gmail.com">
+                                vyshnavpv447@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span>Phone</span>
+
+                            <a href="tel:+917559038572">
+                                +91 75590 38572
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span>Location</span>
+
+                            Trivandrum, Kerala, India
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="contact-form reveal"
+                    onsubmit="sendMessage(event)"
+                >
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <p>
+                    © 2026 Vyshnav PV. All rights reserved.
+                </p>
+
+                <div class="footer-social">
+
+                    <a
+                        href="https://www.instagram.com/not_white_10/"
+                        target="_blank"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/vyshnav-pv-74ba96273/"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* ==========================
+           MOBILE MENU
+        ========================== */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+
+        /* ==========================
+           SCROLL REVEAL
+        ========================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target
+                                .classList
+                                .add("active");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* ==========================
+           SKILL ANIMATION
+        ========================== */
+
+        const skills =
+            document.querySelectorAll(".skill");
+
+
+        const skillObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    if (entries[0].isIntersecting) {
+
+                        skills.forEach((skill, index) => {
+
+                            setTimeout(() => {
+
+                                skill.classList.add("show");
+
+                            }, index * 70);
+
+                        });
+
+                    }
+
+                },
+
+                {
+                    threshold: 0.1
+                }
+
+            );
+
+
+        if (skills.length) {
+
+            skillObserver.observe(skills[0]);
+
+        }
+
+
+
+        /* ==========================
+           TIMELINE ANIMATION
+        ========================== */
+
+        const timelineItems =
+            document.querySelectorAll(".timeline-item");
+
+
+        const timelineObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    if (entries[0].isIntersecting) {
+
+                        timelineItems.forEach((item, index) => {
+
+                            setTimeout(() => {
+
+                                item.classList.add("show");
+
+                            }, index * 180);
+
+                        });
+
+                    }
+
+                },
+
+                {
+                    threshold: 0.1
+                }
+
+            );
+
+
+        if (timelineItems.length) {
+
+            timelineObserver.observe(timelineItems[0]);
+
+        }
+
+
+
+        /* ==========================
+           PROJECT ANIMATION
+        ========================== */
+
+        const projects =
+            document.querySelectorAll(".project");
+
+
+        const projectObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    if (entries[0].isIntersecting) {
+
+                        projects.forEach((project, index) => {
+
+                            setTimeout(() => {
+
+                                project.classList.add("show");
+
+                            }, index * 90);
+
+                        });
+
+                    }
+
+                },
+
+                {
+                    threshold: 0.1
+                }
+
+            );
+
+
+        if (projects.length) {
+
+            projectObserver.observe(projects[0]);
+
+        }
+
+
+
+        /* ==========================
+           CONTACT FORM
+        ========================== */
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const subject =
+                document.getElementById("subject").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            const body =
+                encodeURIComponent(
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message
+                );
+
+
+            const mailSubject =
+                encodeURIComponent(subject);
+
+
+            window.location.href =
+                "mailto:vyshnavpv447@gmail.com" +
+                "?subject=" +
+                mailSubject +
+                "&body=" +
+                body;
+
+        }
+
+    </script>
+
+</body>
+
+</html>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

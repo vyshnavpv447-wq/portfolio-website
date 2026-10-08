@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: 
-Crawl-delay: 10
-Disallow: /cgi-bin/
-Sitemap: https://vyshnavpv447-wq.github.io/portfolio-website/sitemap.xml

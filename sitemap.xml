@@ -1,10 +1,16 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+<<<<<<< HEAD
        <loc>https://vyshnavpv447-wq.github.io/portfolio-website/</loc>
        <lastmod>2026-10-09T05:53:20+00:00</lastmod>
        <priority>1.0000</priority>
+=======
+    <loc>https://vyshnavpv447-wq.github.io/portfolio-website/</loc>
+>>>>>>> 5067eae2cc30aa820bfa62fc7e84ca170a33ef62
   </url>
+
 </urlset>
+```
